@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Communities</title>
+  <link rel="stylesheet" href="communities-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <!-- Header-->
+    <header class="header">
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link active">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="h" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Namae</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar (Same structure as other pages) -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item active">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="project-detail.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        
+          <!-- Buat sidebar jadi bs di toggle -->
+          <div class="sidebar-footer">
+            <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+              <i class="fa-solid fa-chevron-left"></i>
+              <span class="sr-only">Collapse Sidebar</span>
+            </button>
+          </div>
+      </aside>
+      
+      <!-- Communities Content -->
+      <main class="page-main">
+        <div class="page-header">
+          <h1 class="page-title">My Communities</h1>
+          <div class="page-actions">
+            <a href="explore.html?tab=communities" class="btn primary-btn">
+              <i class="fa-solid fa-plus"></i>
+              Join A Community
+            </a>
+
+            <a href="#" class="btn primary-btn">
+              <i class="fa-solid fa-plus"></i>
+              Create New Community
+            </a>
+          </div>
+        </div>
+        
+        <div class="communities-grid">
+          <!-- Active Communities -->
+          <div class="community-card">
+            <div class="community-header">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png" alt="Frontend Developers" class="community-banner">
+              <div class="community-avatar">
+                <img src="https://via.placeholder.com/80" alt="Frontend Developers">
+              </div>
+            </div>
+            <div class="community-body">
+              <h3 class="community-title">Frontend Developers</h3>
+              <p class="community-description">A community for frontend developers to share knowledge, resources, and job opportunities.</p>
+              <div class="community-meta">
+                <span class="community-members">
+                  <i class="fa-solid fa-user-group"></i>
+                  1.2k members
+                </span>
+                <span class="community-activity">
+                  <i class="fa-solid fa-bolt"></i>
+                  Very Active
+                </span>
+              </div>
+              <div class="community-tags">
+                <span class="community-tag">HTML</span>
+                <span class="community-tag">CSS</span>
+                <span class="community-tag">JavaScript</span>
+                <span class="community-tag">React</span>
+              </div>
+            </div>
+            <div class="community-footer">
+              <a href="community-detail.html?id=1" class="community-btn">View Community</a>
+              <div class="community-notification">
+                <i class="fa-solid fa-bell-slash"></i>
+                <span class="sr-only">Notifications Off</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="community-card">
+            <div class="community-header">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png" alt="UX/UI Designers" class="community-banner">
+              <div class="community-avatar">
+                <img src="https://via.placeholder.com/80" alt="UX/UI Designers">
+              </div>
+            </div>
+            <div class="community-body">
+              <h3 class="community-title">UX/UI Designers</h3>
+              <p class="community-description">Connect with other designers, share your work, and get feedback on your designs.</p>
+              <div class="community-meta">
+                <span class="community-members">
+                  <i class="fa-solid fa-user-group"></i>
+                  856 members
+                </span>
+                <span class="community-activity">
+                  <i class="fa-solid fa-bolt"></i>
+                  Active
+                </span>
+              </div>
+              <div class="community-tags">
+                <span class="community-tag">UI</span>
+                <span class="community-tag">UX</span>
+                <span class="community-tag">Design</span>
+                <span class="community-tag">Figma</span>
+              </div>
+            </div>
+            <div class="community-footer">
+              <a href="community-detail.html?id=2" class="community-btn">View Community</a>
+              <div class="community-notification active">
+                <i class="fa-solid fa-bell"></i>
+                <span class="sr-only">Notifications On</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="community-card">
+            <div class="community-header">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png" alt="Data Scientists" class="community-banner">
+              <div class="community-avatar">
+                <img src="https://via.placeholder.com/80" alt="Data Scientists">
+              </div>
+            </div>
+            <div class="community-body">
+              <h3 class="community-title">Data Scientists</h3>
+              <p class="community-description">A community for data scientists to discuss techniques, tools, and career opportunities.</p>
+              <div class="community-meta">
+                <span class="community-members">
+                  <i class="fa-solid fa-user-group"></i>
+                  1.5k members
+                </span>
+                <span class="community-activity">
+                  <i class="fa-solid fa-bolt"></i>
+                  Very Active
+                </span>
+              </div>
+              <div class="community-tags">
+                <span class="community-tag">Python</span>
+                <span class="community-tag">ML</span>
+                <span class="community-tag">AI</span>
+                <span class="community-tag">Data</span>
+              </div>
+            </div>
+            <div class="community-footer">
+              <a href="community-detail.html?id=3" class="community-btn">View Community</a>
+              <div class="community-notification active">
+                <i class="fa-solid fa-bell"></i>
+                <span class="sr-only">Notifications On</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="community-card">
+            <div class="community-header">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png" alt="Backend Developers" class="community-banner">
+              <div class="community-avatar">
+                <img src="https://via.placeholder.com/80" alt="Backend Developers">
+              </div>
+            </div>
+            <div class="community-body">
+              <h3 class="community-title">Backend Developers</h3>
+              <p class="community-description">Discuss server-side technologies, databases, and architecture patterns.</p>
+              <div class="community-meta">
+                <span class="community-members">
+                  <i class="fa-solid fa-user-group"></i>
+                  980 members
+                </span>
+                <span class="community-activity">
+                  <i class="fa-solid fa-bolt"></i>
+                  Active
+                </span>
+              </div>
+              <div class="community-tags">
+                <span class="community-tag">Node.js</span>
+                <span class="community-tag">Python</span>
+                <span class="community-tag">Java</span>
+                <span class="community-tag">SQL</span>
+              </div>
+            </div>
+            <div class="community-footer">
+              <a href="community-detail.html?id=4" class="community-btn">View Community</a>
+              <div class="community-notification">
+                <i class="fa-solid fa-bell-slash"></i>
+                <span class="sr-only">Notifications Off</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recommended Communities -->
+        <section class="recommended-section">
+          <h2 class="section-title">Recommended Communities</h2>
+          
+          <div class="recommended-communities">
+            <div class="recommended-card">
+              <div class="recommended-avatar">
+                <img src="https://via.placeholder.com/60" alt="DevOps Engineers">
+              </div>
+              <div class="recommended-info">
+                <h3 class="recommended-title">DevOps Engineers</h3>
+                <p class="recommended-description">Learn about CI/CD, containerization, and cloud infrastructure.</p>
+                <div class="recommended-meta">
+                  <span class="recommended-members">2.1k members</span>
+                </div>
+              </div>
+              <button class="recommended-join-btn">Join</button>
+            </div>
+            
+            <div class="recommended-card">
+              <div class="recommended-avatar">
+                <img src="https://via.placeholder.com/60" alt="Mobile Developers">
+              </div>
+              <div class="recommended-info">
+                <h3 class="recommended-title">Mobile Developers</h3>
+                <p class="recommended-description">Share knowledge about iOS, Android, and cross-platform development.</p>
+                <div class="recommended-meta">
+                  <span class="recommended-members">1.8k members</span>
+                </div>
+              </div>
+              <button class="recommended-join-btn">Join</button>
+            </div>
+            
+            <div class="recommended-card">
+              <div class="recommended-avatar">
+                <img src="https://via.placeholder.com/60" alt="Blockchain Enthusiasts">
+              </div>
+              <div class="recommended-info">
+                <h3 class="recommended-title">Blockchain Enthusiasts</h3>
+                <p class="recommended-description">Discuss blockchain technology, cryptocurrencies, and smart contracts.</p>
+                <div class="recommended-meta">
+                  <span class="recommended-members">950 members</span>
+                </div>
+              </div>
+              <button class="recommended-join-btn">Join</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    // If you want to control visibility separately:
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+  <script>
+    const cards = document.querySelectorAll('.recommended-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add a delay before adding the class
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 150); // Adjust delay per card (150ms between cards)
+        } else {
+          entry.target.classList.remove('visible'); // Reset when out of view
+        }
+      });
+    }, {
+      threshold: 0.1,
+    });
+
+    cards.forEach((card) => observer.observe(card));
+
+  </script>
+   <script>
+    const theme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (theme === "dark" || (!theme && prefersDark)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+</body>
+</html>

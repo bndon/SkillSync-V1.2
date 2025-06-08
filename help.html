@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Messages</title>
+  <link rel="stylesheet" href="help-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="project-detail.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item active">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Help Content -->
+      <main class="page-main">
+        <div class="page-header">
+          <h1 class="page-title">Help & Support</h1>
+          <p class="page-description">Find answers to your questions and get support</p>
+        </div>
+        
+        <div class="help-container">
+          <div class="help-search">
+            <div class="help-search-form">
+              <i class="fa-solid fa-search help-search-icon"></i>
+              <input type="search" placeholder="Search for help..." class="help-search-input">
+              <button type="submit" class="help-search-btn">Search</button>
+            </div>
+          </div>
+          
+          <div class="help-categories">
+            <div class="help-category">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <h3 class="help-category-title">Getting Started</h3>
+              <p class="help-category-description">Learn the basics of using SkillSync</p>
+              <a href="#" class="help-category-link">View Guides</a>
+            </div>
+            
+            <div class="help-category">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="help-category-title">Courses</h3>
+              <p class="help-category-description">How to enroll, complete, and track courses</p>
+              <a href="#" class="help-category-link">View Guides</a>
+            </div>
+            
+            <div class="help-category">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="help-category-title">Communities</h3>
+              <p class="help-category-description">Join and participate in learning communities</p>
+              <a href="#" class="help-category-link">View Guides</a>
+            </div>
+            
+            <div class="help-category">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <h3 class="help-category-title">Billing</h3>
+              <p class="help-category-description">Manage your subscription and payments</p>
+              <a href="#" class="help-category-link">View Guides</a>
+            </div>
+            
+            <div class="help-category">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="help-category-title">Account & Security</h3>
+              <p class="help-category-description">Manage your account settings and security</p>
+              <a href="#" class="help-category-link">View Guides</a>
+            </div>
+            
+            <div class="help-category">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="help-category-title">Certificates</h3>
+              <p class="help-category-description">How to earn and share your certificates</p>
+              <a href="#" class="help-category-link">View Guides</a>
+            </div>
+          </div>
+          
+          <div class="help-sections">
+            <div class="help-section">
+              <h2 class="help-section-title">Frequently Asked Questions</h2>
+              
+              <div class="faq-list">
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>How do I reset my password?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To reset your password, click on the "Forgot Password" link on the login page. Enter your email address, and we'll send you a link to reset your password. Follow the instructions in the email to create a new password.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>How do I enroll in a course?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To enroll in a course, navigate to the course page and click the "Enroll" button. If the course is free, you'll be enrolled immediately. If it's a paid course, you'll be prompted to complete the payment process before enrollment.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>How do I track my progress?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>You can track your progress on the Dashboard page. It shows your enrolled courses, completion percentage, and upcoming deadlines. You can also view detailed progress for each course on the course page.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>How do I get a certificate?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Certificates are awarded automatically upon successful completion of a course. You can view and download your certificates from the "Certificates" section in your profile. You can also share them directly to LinkedIn or other platforms.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>How do I cancel my subscription?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To cancel your subscription, go to Settings > Billing > Current Plan and click "Change Plan". From there, select "Cancel Subscription". Your subscription will remain active until the end of the current billing period.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="help-section">
+              <h2 class="help-section-title">Contact Support</h2>
+              
+              <div class="contact-options">
+                <div class="contact-option">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-comments"></i>
+                  </div>
+                  <h3 class="contact-title">Live Chat</h3>
+                  <p class="contact-description">Chat with our support team in real-time</p>
+                  <button class="btn primary-btn">Start Chat</button>
+                </div>
+                
+                <div class="contact-option">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <h3 class="contact-title">Email Support</h3>
+                  <p class="contact-description">Get help via email within 24 hours</p>
+                  <button class="btn primary-btn">Send Email</button>
+                </div>
+                
+                <div class="contact-option">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-ticket"></i>
+                  </div>
+                  <h3 class="contact-title">Submit a Ticket</h3>
+                  <p class="contact-description">Create a support ticket for complex issues</p>
+                  <button class="btn primary-btn">Create Ticket</button>
+                </div>
+              </div>
+              
+              <div class="support-hours">
+                <h3>Support Hours</h3>
+                <p>Our support team is available Monday through Friday, 9:00 AM to 6:00 PM EST.</p>
+                <p>Weekend support is available for urgent issues only.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="help-community">
+            <h2 class="help-section-title">Community Support</h2>
+            <p class="help-section-description">Get help from other SkillSync users and share your knowledge</p>
+            
+            <div class="community-options">
+              <a href="#" class="community-option">
+                <div class="community-icon">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="community-content">
+                  <h3 class="community-title">Discussion Forums</h3>
+                  <p class="community-description">Ask questions and share insights with the SkillSync community</p>
+                </div>
+                <i class="fa-solid fa-chevron-right community-arrow"></i>
+              </a>
+              
+              <a href="#" class="community-option">
+                <div class="community-icon">
+                  <i class="fa-brands fa-discord"></i>
+                </div>
+                <div class="community-content">
+                  <h3 class="community-title">Discord Community</h3>
+                  <p class="community-description">Join our Discord server for real-time discussions and support</p>
+                </div>
+                <i class="fa-solid fa-chevron-right community-arrow"></i>
+              </a>
+              
+              <a href="#" class="community-option">
+                <div class="community-icon">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div class="community-content">
+                  <h3 class="community-title">Feature Requests</h3>
+                  <p class="community-description">Suggest and vote on new features for SkillSync</p>
+                </div>
+                <i class="fa-solid fa-chevron-right community-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+   <script>
+    const theme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (theme === "dark" || (!theme && prefersDark)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+</body>
+</html>

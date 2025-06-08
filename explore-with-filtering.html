@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillSync - Explore</title>
+<link href="explore-styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="app-container">
+<!-- Header -->
+<header class="header">
+<!-- Ini logo -->
+<a class="logo-link" href="index.html">
+<div class="logo">S</div>
+<span>SkillSync</span>
+</a>
+<nav class="main-nav">
+<div class="nav-links">
+<a class="nav-link" href="dashboard.html">
+<i class="fa-solid fa-house nav-icon"></i>
+<span>Dashboard</span>
+</a>
+<a class="nav-link" href="courses.html">
+<i class="fa-solid fa-book nav-icon"></i>
+<span>Courses</span>
+</a>
+<a class="nav-link" href="communities.html">
+<i class="fa-solid fa-users nav-icon"></i>
+<span>Communities</span>
+</a>
+<a class="nav-link active" href="explore.html">
+<i class="fa-solid fa-compass nav-icon"></i>
+<span>Explore</span>
+</a>
+</div>
+</nav>
+<div class="user-actions">
+<button class="notification-btn">
+<i class="fa-solid fa-bell notification-icon"></i>
+<span class="notification-badge">3</span>
+<span class="sr-only">Notifications</span>
+</button>
+<div class="dropdown">
+<div class="avatar dropdown-trigger">
+<img alt="User" class="avatar-image" src=""/>
+</div>
+<div class="dropdown-menu">
+<div class="dropdown-label">
+<div>Your Name</div>
+<div class="dropdown-email">Name@example.com</div>
+</div>
+<div class="dropdown-separator"></div>
+<a class="dropdown-item" href="profile.html">
+<i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+<a class="dropdown-item" href="settings.html">
+<i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+<div class="dropdown-separator"></div>
+<button class="dropdown-item">
+<i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+</div>
+</div>
+</div>
+</header>
+<div class="main-content">
+<!-- Sidebar -->
+<aside class="sidebar">
+<nav class="sidebar-nav">
+<div class="sidebar-section">
+<h3 class="sidebar-title">Menu</h3>
+<div class="sidebar-items">
+<a class="sidebar-item" href="dashboard.html">
+<i class="fa-solid fa-house sidebar-icon"></i>
+<span>Dashboard</span>
+</a>
+<a class="sidebar-item" href="courses.html">
+<i class="fa-solid fa-book sidebar-icon"></i>
+<span>Courses</span>
+</a>
+<a class="sidebar-item" href="communities.html">
+<i class="fa-solid fa-users sidebar-icon"></i>
+<span>Communities</span>
+</a>
+<a class="sidebar-item" href="messages.html">
+<i class="fa-solid fa-message sidebar-icon"></i>
+<span>Messages</span>
+<span class="sidebar-badge">5</span>
+</a>
+<a class="sidebar-item" href="project-detail.html">
+<i class="fa-solid fa-code sidebar-icon"></i>
+<span>Projects</span>
+</a>
+</div>
+</div>
+<div class="sidebar-section">
+<h3 class="sidebar-title">Discover</h3>
+<div class="sidebar-items">
+<a class="sidebar-item active" href="explore.html">
+<i class="fa-solid fa-compass sidebar-icon"></i>
+<span>Explore</span>
+</a>
+<a class="sidebar-item" href="achievements.html">
+<i class="fa-solid fa-star sidebar-icon"></i>
+<span>Achievements</span>
+</a>
+</div>
+</div>
+<div class="sidebar-section">
+<h3 class="sidebar-title">Account</h3>
+<div class="sidebar-items">
+<a class="sidebar-item" href="profile.html">
+<i class="fa-solid fa-user sidebar-icon"></i>
+<span>Profile</span>
+</a>
+<a class="sidebar-item" href="settings.html">
+<i class="fa-solid fa-gear sidebar-icon"></i>
+<span>Settings</span>
+</a>
+<a class="sidebar-item" href="help.html">
+<i class="fa-solid fa-circle-question sidebar-icon"></i>
+<span>Help &amp; Support</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Buat sidebar jadi bs di toggle -->
+<div class="sidebar-footer">
+<button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+<i class="fa-solid fa-chevron-left"></i>
+<span class="sr-only">Collapse Sidebar</span>
+</button>
+</div>
+</aside>
+<!-- Explore Content -->
+<main class="page-main">
+<div class="page-header">
+<h1 class="page-title">Explore</h1>
+</div>
+<div class="explore-tabs">
+<button class="explore-tab active" data-tab="all">All</button>
+<button class="explore-tab" data-tab="courses">Courses</button>
+<button class="explore-tab" data-tab="communities">Communities</button>
+<button class="explore-tab" data-tab="projects">Projects</button>
+<button class="explore-tab" data-tab="events">Events</button>
+</div>
+<div class="explore-filters">
+<div class="filter-group">
+<label class="filter-label">Category</label>
+<select class="filter-select">
+<option value="all">All Categories</option>
+<option value="web-development">Web Development</option>
+<option value="mobile-development">Mobile Development</option>
+<option value="data-science">Data Science</option>
+<option value="design">Design</option>
+<option value="business">Business</option>
+</select>
+</div>
+<div class="filter-group">
+<label class="filter-label">Level</label>
+<select class="filter-select">
+<option value="all">All Levels</option>
+<option value="beginner">Beginner</option>
+<option value="intermediate">Intermediate</option>
+<option value="advanced">Advanced</option>
+</select>
+</div>
+<div class="filter-group">
+<label class="filter-label">Duration</label>
+<select class="filter-select">
+<option value="all">Any Duration</option>
+<option value="short">Short (3 hours)</option>
+<option value="medium">Medium (3-10 hours)</option>
+<option value="long">Long (&gt; 10 hours)</option>
+</select>
+</div>
+<div class="filter-group">
+<label class="filter-label">Rating</label>
+<select class="filter-select">
+<option value="all">Any Rating</option>
+<option value="4.5">4.5 &amp; up</option>
+<option value="4.0">4.0 &amp; up</option>
+<option value="3.5">3.5 &amp; up</option>
+</select>
+</div>
+</div>
+<div class="tab-content active" id="all-content">
+<div class="explore-section">
+<div class="section-header">
+<h2 class="section-title">Trending Courses</h2>
+</div>
+<div class="content-grid">
+<div class="content-card" data-category="web-development" data-duration="long" data-level="advanced" data-rating="4.9">
+<div class="content-image">
+<img alt="Advanced React Patterns" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge course">Course</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">Advanced React Patterns</h3>
+<p class="content-description">Learn advanced React patterns and techniques</p>
+<div class="content-meta">
+<span class="content-rating">
+<i class="fa-solid fa-star"></i>
+                      4.9
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      15h
+                    </span>
+</div>
+<a class="content-btn" href="course-detail.html">View Course</a>
+</div>
+</div>
+<div class="content-card" data-category="data-science" data-duration="long" data-level="intermediate" data-rating="4.7">
+<div class="content-image">
+<img alt="Machine Learning Fundamentals" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge course">Course</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">Machine Learning Fundamentals</h3>
+<p class="content-description">Introduction to machine learning concepts</p>
+<div class="content-meta">
+<span class="content-rating">
+<i class="fa-solid fa-star"></i>
+                      4.7
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      20h
+                    </span>
+</div>
+<a class="content-btn" href="course-detail.html">View Course</a>
+</div>
+</div>
+<div class="content-card" data-category="design" data-duration="medium" data-level="intermediate" data-rating="4.8">
+<div class="content-image">
+<img alt="UI/UX Design Masterclass" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge course">Course</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">UI/UX Design Masterclass</h3>
+<p class="content-description">Comprehensive guide to UI/UX design</p>
+<div class="content-meta">
+<span class="content-rating">
+<i class="fa-solid fa-star"></i>
+                      4.8
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      18h
+                    </span>
+</div>
+<a class="content-btn" href="course-detail.html">View Course</a>
+</div>
+</div>
+<div class="content-card" data-category="web-development" data-duration="long" data-level="advanced" data-rating="4.6">
+<div class="content-image">
+<img alt="Full Stack Development" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge course">Course</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">Full Stack Development</h3>
+<p class="content-description">Build complete web applications from scratch</p>
+<div class="content-meta">
+<span class="content-rating">
+<i class="fa-solid fa-star"></i>
+                      4.6
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      30h
+                    </span>
+</div>
+<a class="content-btn" href="course-detail.html">View Course</a>
+</div>
+</div>
+</div>
+</div>
+<div class="explore-section">
+<div class="section-header">
+<h2 class="section-title">Popular Communities</h2>
+</div>
+<div class="content-grid">
+<div class="community-card">
+<div class="community-header">
+<img alt="JavaScript Developers" class="community-banner" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="community-avatar">
+<img alt="JavaScript Developers" src="https://via.placeholder.com/80"/>
+</div>
+</div>
+<div class="community-body">
+<h3 class="community-title">JavaScript Developers</h3>
+<p class="community-description">A community for JavaScript developers to share knowledge and resources.</p>
+<div class="community-meta">
+<span class="community-members">
+<i class="fa-solid fa-user-group"></i>
+                      2.5k members
+                    </span>
+<span class="community-activity">
+<i class="fa-solid fa-bolt"></i>
+                      Very Active
+                    </span>
+</div>
+</div>
+<div class="community-footer">
+<button class="community-join-btn">Join Community</button>
+</div>
+</div>
+<div class="community-card">
+<div class="community-header">
+<img alt="Data Scientists Network" class="community-banner" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="community-avatar">
+<img alt="Data Scientists Network" src="https://via.placeholder.com/80"/>
+</div>
+</div>
+<div class="community-body">
+<h3 class="community-title">Data Scientists Network</h3>
+<p class="community-description">Connect with data scientists and analysts from around the world.</p>
+<div class="community-meta">
+<span class="community-members">
+<i class="fa-solid fa-user-group"></i>
+                      1.8k members
+                    </span>
+<span class="community-activity">
+<i class="fa-solid fa-bolt"></i>
+                      Active
+                    </span>
+</div>
+</div>
+<div class="community-footer">
+<button class="community-join-btn">Join Community</button>
+</div>
+</div>
+<div class="community-card">
+<div class="community-header">
+<img alt="UI/UX Designers" class="community-banner" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="community-avatar">
+<img alt="UI/UX Designers" src="https://via.placeholder.com/80"/>
+</div>
+</div>
+<div class="community-body">
+<h3 class="community-title">UI/UX Designers</h3>
+<p class="community-description">Share designs, get feedback, and discuss UI/UX trends.</p>
+<div class="community-meta">
+<span class="community-members">
+<i class="fa-solid fa-user-group"></i>
+                      1.2k members
+                    </span>
+<span class="community-activity">
+<i class="fa-solid fa-bolt"></i>
+                      Active
+                    </span>
+</div>
+</div>
+<div class="community-footer">
+<button class="community-join-btn">Join Community</button>
+</div>
+</div>
+</div>
+</div>
+<div class="explore-section">
+<div class="section-header">
+<h2 class="section-title">Featured Projects</h2>
+</div>
+<div class="content-grid">
+<div class="content-card" data-category="web-development" data-duration="long" data-level="intermediate" data-rating="4.5">
+<div class="content-image">
+<img alt="E-commerce Website" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge project">Project</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">E-commerce Website</h3>
+<p class="content-description">Build a complete e-commerce website with React and Node.js</p>
+<div class="content-meta">
+<span class="content-difficulty">
+<i class="fa-solid fa-signal"></i>
+                      Intermediate
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      40h
+                    </span>
+</div>
+<a class="content-btn" href="project-detail.html">View Project</a>
+</div>
+</div>
+<div class="content-card" data-category="design" data-duration="medium" data-level="beginner" data-rating="4.2">
+<div class="content-image">
+<img alt="Portfolio Website" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge project">Project</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">Portfolio Website</h3>
+<p class="content-description">Create a professional portfolio website to showcase your work</p>
+<div class="content-meta">
+<span class="content-difficulty">
+<i class="fa-solid fa-signal"></i>
+                      Beginner
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      15h
+                    </span>
+</div>
+<a class="content-btn" href="project-detail.html">View Project</a>
+</div>
+</div>
+<div class="content-card" data-category="mobile-development" data-duration="long" data-level="advanced" data-rating="4.4">
+<div class="content-image">
+<img alt="Social Media App" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png"/>
+<div class="content-badge project">Project</div>
+</div>
+<div class="content-info">
+<h3 class="content-title">Social Media App</h3>
+<p class="content-description">Build a social media application with React Native</p>
+<div class="content-meta">
+<span class="content-difficulty">
+<i class="fa-solid fa-signal"></i>
+                      Advanced
+                    </span>
+<span class="content-duration">
+<i class="fa-solid fa-clock"></i>
+                      50h
+                    </span>
+</div>
+<a class="content-btn" href="project-detail.html">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="explore-section">
+<div class="section-header">
+<h2 class="section-title">Upcoming Events</h2>
+</div>
+<div class="events-list">
+<div class="event-card">
+<div class="event-date">
+<div class="date-day">15</div>
+<div class="date-month">May</div>
+</div>
+<div class="event-details">
+<h3 class="event-title">React Workshop: Advanced Hooks</h3>
+<p class="event-time">
+<i class="fa-solid fa-clock"></i>
+                    2:00 PM - 4:00 PM
+                  </p>
+<p class="event-description">
+                    Learn advanced React hooks and patterns to build more efficient and maintainable components.
+                  </p>
+<div class="event-actions">
+<button class="event-btn">
+<i class="fa-solid fa-calendar-check"></i>
+                      RSVP
+                    </button>
+<button class="event-btn outline">
+<i class="fa-solid fa-bell"></i>
+                      Remind me
+                    </button>
+</div>
+</div>
+</div>
+<div class="event-card">
+<div class="event-date">
+<div class="date-day">20</div>
+<div class="date-month">May</div>
+</div>
+<div class="event-details">
+<h3 class="event-title">Career Panel: Tech Industry Insights</h3>
+<p class="event-time">
+<i class="fa-solid fa-clock"></i>
+                    6:00 PM - 8:00 PM
+                  </p>
+<p class="event-description">
+                    Join industry experts as they share insights and advice on navigating a career in tech.
+                  </p>
+<div class="event-actions">
+<button class="event-btn">
+<i class="fa-solid fa-calendar-check"></i>
+                      RSVP
+                    </button>
+<button class="event-btn outline">
+<i class="fa-solid fa-bell"></i>
+                      Remind me
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="courses-content">
+<!-- Courses tab content will be loaded here -->
+</div>
+<div class="tab-content" id="communities-content">
+<!-- Communities tab content will be loaded here -->
+</div>
+<div class="tab-content" id="projects-content">
+<!-- Projects tab content will be loaded here -->
+</div>
+<div class="tab-content" id="events-content">
+<!-- Events tab content will be loaded here -->
+</div>
+</main>
+</div>
+</div>
+<script src="script.js"></script>
+<script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    // If you want to control visibility separately:
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+<script>
+  // Tab switching
+  const tabs = document.querySelectorAll('.explore-tab');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const selectedTab = tab.dataset.tab;
+
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      tabContents.forEach(content => {
+        if (content.id === `${selectedTab}-content`) {
+          content.classList.add('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+
+      filterCards(); // Filter on tab switch
+    });
+  });
+
+  // Filtering
+  const filters = {
+    category: document.getElementById('filter-category'),
+    level: document.getElementById('filter-level'),
+    duration: document.getElementById('filter-duration'),
+    rating: document.getElementById('filter-rating')
+  };
+
+  function filterCards() {
+    const activeContent = document.querySelector('.tab-content.active');
+    const cards = activeContent.querySelectorAll('.content-card');
+
+    cards.forEach(card => {
+      const cardCategory = card.dataset.category;
+      const cardLevel = card.dataset.level;
+      const cardDuration = card.dataset.duration;
+      const cardRating = parseFloat(card.dataset.rating);
+
+      const matchCategory = filters.category.value === 'all' || filters.category.value === cardCategory;
+      const matchLevel = filters.level.value === 'all' || filters.level.value === cardLevel;
+      const matchDuration = filters.duration.value === 'all' || filters.duration.value === cardDuration;
+      const matchRating = filters.rating.value === 'all' || cardRating >= parseFloat(filters.rating.value);
+
+      if (matchCategory && matchLevel && matchDuration && matchRating) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  Object.values(filters).forEach(select => {
+    select.addEventListener('change', filterCards);
+  });
+
+  // Initial run
+  filterCards();
+</script></body>
+</html>
