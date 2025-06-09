@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
           // Redirect to dashboard after "authentication"
-          window.location.href = "dashboard.html"
+          window.location.href = "login.html"
         }, 1500)
       }
     })
